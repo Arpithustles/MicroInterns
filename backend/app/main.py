@@ -26,16 +26,18 @@ SECRET = os.getenv(
 
 app = FastAPI(title="MicroIntern API", version="1.0.0")
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://micro-interns-n9ne.vercel.app",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:5174",
         "http://127.0.0.1:5174",
         "http://localhost:5176",
         "http://127.0.0.1:5176",
-        "http://localhost:5177/",
+        "http://localhost:5177",
         "http://127.0.0.1:5177",
     ],
     allow_credentials=True,
